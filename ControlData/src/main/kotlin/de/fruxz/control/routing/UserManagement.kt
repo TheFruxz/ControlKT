@@ -1,13 +1,12 @@
-package de.fruxz.control
+package de.fruxz.control.routing
 
 import de.fruxz.control.data.User
 import de.fruxz.control.permission.RequiresPermission
-import de.fruxz.control.routing.EndPoint
 import java.util.UUID
 
 object UserManagement {
 
-	fun getUser(username: String): User? = User(UUID.randomUUID(), setOf("test")) // TODO
+	fun getUser(username: String): User? = User(UUID.randomUUID(), setOf("*")) // TODO
 
 	fun getUser(id: UUID): User? {
 		return getUser("") // TODO
