@@ -1,3 +1,10 @@
 package de.fruxz.control.routing
 
-annotation class Route()
+import kotlin.annotation.AnnotationTarget.FUNCTION
+
+/**
+ * This annotation defines, that a function
+ * is a route to other functions (inside an object)
+ */
+@Target(FUNCTION)
+annotation class Route

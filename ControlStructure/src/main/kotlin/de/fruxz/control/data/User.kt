@@ -1,3 +1,8 @@
 package de.fruxz.control.data
 
-data class User()
+import java.util.UUID
+
+data class User(
+	val userId: UUID,
+	val permissions: Set<String>,
+)
