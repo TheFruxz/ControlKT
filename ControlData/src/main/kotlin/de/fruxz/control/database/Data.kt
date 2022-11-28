@@ -12,7 +12,7 @@ object Data {
 	fun <T> talk(block: Transaction.() -> T) = transaction(database, statement = block)
 
 	fun initialize() = talk {
-		SchemaUtils.create(CustomerTable)
+		SchemaUtils.create(CustomerTable, UserTable)
 	}
 
 }
